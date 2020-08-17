@@ -14,4 +14,8 @@ app.get("/api/test", function(req, res){
     })
 })
 
+app.get("*", function(req, res){
+    res.sendFile("./client/build/index.html");
+})
+
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
